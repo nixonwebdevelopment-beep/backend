@@ -33,6 +33,12 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
+    console.log('Groq response:', JSON.stringify(data));
+    
+    if (!data.choices || !data.choices[0]) {
+      return res.status(500).json({ error: 'No response from Groq', raw: data });
+    }
+    
     res.status(200).json({ html: data.choices[0].message.content });
 
   } catch (err) {
