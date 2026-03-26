@@ -26,7 +26,7 @@ export default async function handler(req, res) {
           },
           {
             role: 'user',
-            content: `Create a complete, beautiful, single-file HTML website for: "${prompt}". Requirements: everything in one HTML file with inline CSS and JS, visually stunning with animations, professional modern design, multiple sections with relevant content, mobile responsive. Return ONLY raw HTML, nothing else.`
+            content: `Create a complete, beautiful, single-file HTML website for: "${prompt}". Requirements: everything in one HTML file with inline CSS and JS, visually stunning with animations, professional modern design, multiple sections with relevant content, mobile responsive. Return ONLY raw HTML, nothing else. Make sure it looks unique, and dont use generic gray and white color scheme. Give it a cool font if possible`
           }
         ]
       })
